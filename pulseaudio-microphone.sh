@@ -2,11 +2,12 @@
 
 status() {
   MUTED=$(pacmd list-sources | awk '/\*/,EOF {print}' | awk '/muted/ {print $2; exit}')
+  volume=$(pacmd list-sources | grep "\* index:" -A 7 | grep "volume" | awk -F/ '{print $2}')
 
   if [ "$MUTED" = "yes" ]; then
-    echo "%{F#b58900}%{F-}"
+    echo "%{F#b58900} $volume %{F-}"
   else
-    echo ""
+    echo " $volume"
   fi
 }
 
