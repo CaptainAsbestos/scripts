@@ -5,9 +5,18 @@ status() {
   volume=$(pacmd list-sources | grep "\* index:" -A 7 | grep "volume" | awk -F/ '{print $2}')
 
   if [ "$MUTED" = "yes" ]; then
-    echo "%{F#b58900} $volume %{F-}"
+    echo "%{A1:pactl set-source-mute @DEFAULT_SOURCE@ toggle:}\
+			%{A4:pactl set-source-volume @DEFAULT_SOURCE@ +5%:}\
+			%{A5:pactl set-source-volume @DEFAULT_SOURCE@ -5%:}\
+			%{A3:pavucontrol -t 4:}\
+			%{F#b58900} $volume%{F-}%{A}%{A}%{A}%{A}"
   else
-    echo " $volume"
+    #echo "%{F#dc322f}%{F-} $volume"
+    echo "%{A1:pactl set-source-mute @DEFAULT_SOURCE@ toggle:}\
+			%{A4:pactl set-source-volume @DEFAULT_SOURCE@ +5%:}\
+			%{A5:pactl set-source-volume @DEFAULT_SOURCE@ -5%:}\
+			%{A3:pavucontrol -t 4:}\
+			%{F#dc322f}%{F-} $volume%{A}%{A}%{A}%{A}"
   fi
 }
 
