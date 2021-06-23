@@ -1,0 +1,11 @@
+#!/bin/bash
+
+pkill picom
+
+sleep 1
+
+scrot -s '/tmp/%d-%b-%Y_%H.%M.%S.png' -e 'xclip -selection clipboard -target image/png -i $f'
+
+picom
+
+notify-send -u low -t 3000 'area copied to clipboard'
