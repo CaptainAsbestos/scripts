@@ -1,0 +1,36 @@
+/usr/local/bin/swaylock-effects \
+    --screenshots \
+    --font Eurostile \
+    --font-size 36 \
+    --clock \
+    --timestr %H:%M \
+    --datestr "%a %d %b" \
+    --indicator \
+    --indicator-idle-visible \
+    --indicator-radius 150 \
+    --indicator-thickness 15 \
+    --effect-blur 10x5 \
+    --effect-pixelate 10 \
+    --effect-vignette 0.35:0.5 \
+    --ring-color 073642 \
+    --key-hl-color 2aa198 \
+    --line-color 073642aa \
+    --inside-color 073642aa \
+    --separator-color 00000000 \
+    --fade-in 0.2 \
+    --text-color 859900 \
+    --text-ver-color 268bd2 \
+    --inside-ver-color 073642aa \
+    --ring-ver-color 268bd2 \
+    --text-wrong-color 073642 \
+    --inside-wrong-color dc322faa \
+    --ring-wrong-color cb4b16 \
+    --text-clear-color 2aa198 \
+    --inside-clear-color 073642aa \
+    --line-clear-color 2aa198 \
+    --ring-clear-color 2aa198 \
+    --line-uses-ring \
+    --bs-hl-color b58900 \
+    -f \
+    --text-caps-lock-color d33682 \
+ #   --effect-compose "683,150;255x100;center;/home/alex/Images/enter.png" \
