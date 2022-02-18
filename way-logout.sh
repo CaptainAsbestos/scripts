@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
-question=$(echo "lock screen|kill Xserver|logout|reboot|shutdown" | rofi -sep "|" \
+question=$(echo "lock screen|kill Wayland|logout|reboot|shutdown" | rofi -sep "|" \
     -dmenu -i -p 'System' "" -width 27 -hide-scrollbar \
     -eh 1 -line-padding 4 -font "Hack 16" -position 2 -padding 20 -lines 5 -yoffset 100 -color-enabled)
 
 case $question in
     *"lock screen")
-        solarlock
+        custom-swaylock.sh
         ;;
-    *"kill Xserver")
-        i3-msg exit
+    *"kill Wayland")
+        swaymsg exit
         ;;
     *logout)
         kill -9 -1
