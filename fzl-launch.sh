@@ -1,0 +1,19 @@
+fuzzel\
+    -f Hack:size=11 \
+    -i McMojave-circle-grey-dark \
+    --prompt=\ \
+    -b 073642ee \
+    -t 839496ff \
+    -m 859900ff \
+    -s 002b36ff \
+    -S 93a1a1ff \
+    -r 12 \
+    -B 2 \
+    -C 002b36ff \
+    --line-height=18 \
+    --letter-spacing=0 \
+    -l 10 \
+    -p 2 \
+    -x 18 \
+    -y 12 \
+    -w 36 \

@@ -33,4 +33,7 @@
     --bs-hl-color b58900 \
     -f \
     --text-caps-lock-color d33682 \
+    --show-keyboard \
+    --layout-bg-color 00000000 \
+    --layout-text-color b58900ff \
  #   --effect-compose "683,150;255x100;center;/home/alex/Images/enter.png" \

@@ -1,0 +1,72 @@
+#!/bin/sh
+
+BLANK='#00000000'
+CLEAR='#073642dd'
+DEFAULT='#002b36dd'
+TEXT='#93a1a1'
+WRONG='#dc322f'
+VERIFYING='#b58900'
+
+base03='#002b36'
+base02='#073642'
+base01='#586e75'
+base00='#657b83'
+base0='#839496'
+base1='#93a1a1'
+base2='#eee8d5'
+base3='#fdf6e3'
+yellow='#b58900'
+orange='#cb4b16'
+red='#dc322f'
+magenta='#d33682'
+violet='#6c71c4'
+blue='#268bd2'
+cyan='#2aa198'
+green='#859900'
+
+i3lock \
+    --insidever-color=$base02     \
+    --ringver-color=$green   \
+    \
+    --insidewrong-color=$base02   \
+    --ringwrong-color=$red     \
+    \
+    --inside-color=$DEFAULT        \
+    --ring-color=$BLANK    \
+    --line-color=$BLANK          \
+    --separator-color=$DEFAULT   \
+    \
+    --verif-color=$green          \
+    --wrong-color=$red          \
+    --time-color=$yellow           \
+    --date-color=$yellow           \
+    --layout-color=$blue         \
+    --keyhl-color=$cyan         \
+    --bshl-color=$orange          \
+    \
+    --screen 1                   \
+    --blur 5                     \
+    --clock                      \
+    --indicator                  \
+    --time-str="%H:%M"        \
+    --date-str="%a %b %e %Y"       \
+    --ring-width=20 \
+    --radius=150 \
+    --time-font="Hack"\
+    --date-font="Hack"\
+    --verif-font="Hack"\
+    --layout-font="Hack"\
+    --separator-color=$BLANK\
+    --wrong-font="Hack" \
+    --wrong-text="auth failed"\
+    --verif-text="verifying..."\
+    --lockfailed-text="lock failed"\
+    --greeter-align=0\
+    --greeter-pos="683:300"\
+    --greeter-font="Hack"\
+    --greeteroutline-color=$base01\
+    --greeter-color=$base1\
+    --greeteroutline-width=0\
+    --pass-media-keys\
+    --pass-screen-keys\
+    --pass-volume-keys\

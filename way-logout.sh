@@ -9,7 +9,7 @@ case $question in
         custom-swaylock.sh
         ;;
     *"kill Wayland")
-        swaymsg exit
+        swaymsg exit ; pkill Hyprland
         ;;
     *logout)
         kill -9 -1
